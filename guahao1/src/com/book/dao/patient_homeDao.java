@@ -1,0 +1,96 @@
+package com.book.dao;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.book.db.DBUtil;
+import com.book.model.Patient;
+
+
+public class patient_homeDao {
+	
+	public void addPatient(Patient g) throws Exception{
+		Connection conn=DBUtil.getConnection();
+		String sql="" +
+				"insert into patient" +
+				"(name,sex,id_number,birthday,blood_type,medical_history,mobile," +
+				"email)" +
+				"values(" +
+				"?,?,?,?,?,?,?,?)";
+		PreparedStatement ptmt=conn.prepareStatement(sql);
+		
+		ptmt.setString(1, g.getName());
+ 		ptmt.setString(2, g.getSex());
+ 		ptmt.setString(3, g.getId_number());
+ 		ptmt.setDate(4, new Date (g.getBirthday().getTime()));
+ 		ptmt.setString(5, g.getBlood_type());
+     	ptmt.setString(6, g.getMedical_history());
+     	ptmt.setString(7, g.getMobile());
+     	ptmt.setString(8, g.getEmail());
+ 		ptmt.execute();
+	}
+	
+	
+	public void updatePatient(Patient g) throws SQLException{//更新个人信息
+		Connection conn=DBUtil.getConnection();
+		String sql=""+" update Patient"+
+		" set medical_history=?,mobile=?,email=? "+
+		" where id=? ";
+		
+		PreparedStatement ptmt=conn.prepareStatement(sql);
+		//这个语句会把sql语句加载到驱动程序中，但不直接执行，而是当调用execute()方法时使用
+// 		ptmt.setString(1, g.getName());
+// 		ptmt.setString(2, g.getSex());
+// 		ptmt.setDate(3, new Date (g.getBirthday().getTime()));
+// 		ptmt.setString(4, g.getBlood_type());
+     	ptmt.setString(1, g.getMedical_history());
+     	ptmt.setString(2, g.getMobile());
+     	ptmt.setString(3, g.getEmail());
+     	ptmt.setInt(4, g.getId());
+ 		ptmt.execute();
+	}
+
+	public void delPatient(Integer id) throws SQLException{//删除用户
+		Connection conn=DBUtil.getConnection();
+		String sql=""+" delete from Patient"+
+		" where id=?";
+		
+		PreparedStatement ptmt=conn.prepareStatement(sql);
+		//这个语句会把sql语句加载到驱动程序中，但不直接执行，而是当调用execute()方法时使用
+	
+     	ptmt.setInt(1,id);
+ 		ptmt.execute();
+		
+	}
+	
+	public Patient getPatient(Integer id) throws SQLException{//查询用户
+		Patient g=null;
+		Connection conn=DBUtil.getConnection();
+		String sql=""+" select * from Patient"+
+		" where id=?";
+		
+		PreparedStatement ptmt=conn.prepareStatement(sql);
+		//这个语句会把sql语句加载到驱动程序中，但不直接执行，而是当调用execute()方法时使用
+	
+		ptmt.setInt(1,id);
+		ResultSet rs=ptmt.executeQuery();//查询操作
+		while(rs.next()){
+			g=new Patient(); 
+			g.setName(rs.getString("name"));
+			g.setSex(rs.getString("sex"));
+			g.setId_number(rs.getString("id_number"));
+			g.setBirthday(rs.getDate("birthday"));
+			g.setBlood_type(rs.getString("blood_type"));
+			g.setMedical_history(rs.getString("medical_history"));
+			g.setMoblie(rs.getString("mobile"));
+			g.setEmail(rs.getString("email"));
+		}
+    	return g;
+	}
+}
