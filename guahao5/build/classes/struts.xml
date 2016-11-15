@@ -18,7 +18,17 @@
             <result name="success">/indexe.jsp</result>
       </action>
       
-    
+      <action name="searApartment" class="com.doctor.doctor.searApartment" method="execute">
+            <result name="success">/indexg.jsp</result>
+      </action>
+      
+      <action name="searDoctor" class="com.doctor.doctor.searDoctor" method="execute">
+            <result name="success">/indexh.jsp</result>
+      </action>
+       
+      <action name="searDoctorlist" class="com.doctor.doctor.searDoctorlist" method="execute">
+            <result name="success">/indexg.jsp</result>
+      </action>
 
    </package>
 </struts>

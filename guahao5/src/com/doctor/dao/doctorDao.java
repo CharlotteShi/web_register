@@ -93,7 +93,7 @@ public class doctorDao {
 		PreparedStatement ptmt=conn.prepareStatement(sql);
 		//这个语句会把sql语句加载到驱动程序中，但不直接执行，而是当调用execute()方法时使用
 	
-		ptmt.setInt(1, id);
+		ptmt.setInt(1,id);
 		ResultSet rs=ptmt.executeQuery();//查询操作
 		while(rs.next()){
 			g=new Doctor(); 
