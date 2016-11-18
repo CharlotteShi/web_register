@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="helloworld" extends="struts-default">
+      
+      <action name="registration" class="action.com.registration" method="execute">
+            <result name="success">/indexb.jsp</result>
+      </action>
+      
+      <action name="pay" class="action.com.pay" method="execute">
+            <result name="success">/indexc.jsp</result>
+      </action>
+      
+   </package>
+</struts>
