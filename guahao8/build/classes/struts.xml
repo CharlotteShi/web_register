@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="helloworld" extends="struts-default">
+      
+      <action name="addPatient" class="com.patient.patient.addPatient" method="execute">
+            <result name="success">/indexb.jsp</result>
+      </action>
+      
+      <action name="editPatient" class="com.patient.patient.editPatient" method="execute">
+            <result name="success">/indexd.jsp</result>
+      </action>
+      
+      <action name="searPatient" class="com.patient.patient.searPatient" method="execute">
+            <result name="success">/indexe.jsp</result>
+      </action>
+      
+      <action name="searOrders" class="com.patient.patient.searOrders" method="execute">
+            <result name="success">/indexk.jsp</result>
+      </action>
+      
+      <action name="signPatient" class="com.patient.patient.signPatient" method="execute">
+            <result name="success">/indexe.jsp</result>
+            <result name="fail">/index1.jsp</result>
+      </action>
+      
+      <action name="searApartment" class="com.doctor.doctor.searApartment" method="execute">
+            <result name="success">/indexg.jsp</result>
+      </action>
+      
+      <action name="searDoctor" class="com.doctor.doctor.searDoctor" method="execute">
+            <result name="success">/indexh.jsp</result>
+      </action>
+       
+      <action name="searDoctorlist" class="com.doctor.doctor.searDoctorlist" method="execute">
+            <result name="success">/indexg.jsp</result>
+      </action>
+      
+      <action name="editDoctor" class="com.doctor.doctor.editDoctor" method="execute">
+            <result name="success">/indexj.jsp</result>
+      </action>
+
+   </package>
+</struts>
