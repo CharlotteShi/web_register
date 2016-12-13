@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- 网页的视口 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- 主页制作使用的文字及语言 -->
+<meta name="keywords" content="" /><!-- 像搜索引擎说明网页的关键词 -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script><!-- 页面加载时添加一定时器，0秒后执行hideURLbar函数，此函数将页面滚动至（0,1） -->
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- 调用指定的css文件 -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script><!-- 引入js文件 -->
+<!-- //js -->
+<link href='http://fonts.useso.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling --><!-- 启动平滑滚动 -->
+<script type="text/javascript" src="js/move-top.js"></script><!-- 引入相应的js文件 -->
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->		
+</head>
+<body>
+<!-- header -->
+	<div class="agileits_header">
+		<div class="w3l_top1">
+			<a>按病情查询</a>
+		</div><!---->
+		<div class="w3l_top11">
+			<a href="index.html">首页</a>
+		</div><!--  -->
+		<div class="w3l_top2">
+			<a href="appointment.html">预约挂号</a>
+		</div><!--  -->
+		<div class="w3l_top3">  
+			<a href="team.html">专家团队</a>
+		</div><!---->
+		<div class="w3l_top4">
+			<a href="health.html">健康测评</a>
+		</div><!--  -->
+		<div class="w3l_top5">
+			<ul>
+				<li class="dropdown profile_details_drop">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+					<div class="mega-dropdown-menu">
+						<div class="w3ls_vegetables">
+							<ul class="dropdown-menu drp-mnu">
+								<li><a href="login.html">登录</a></li> 
+								<li><a href="login.html">注册</a></li>
+							</ul>
+						</div>                  
+					</div>	
+				</li>
+			</ul>
+		</div><!-- 登陆注册部分 -->
+		
+		<div class="clearfix"> </div><!--  -->
+	</div><!-- 整个网页的顶部的一条盒子 -->
+	
+	<!-- script-for sticky-nav --><!-- 对于顶部盒子的script -->
+	<script>
+	$(document).ready(function() {
+		 var navoffeset=$(".agileits_header").offset().top;
+		 $(window).scroll(function(){
+			var scrollpos=$(window).scrollTop(); 
+			if(scrollpos >=navoffeset){
+				$(".agileits_header").addClass("fixed");
+			}else{
+				$(".agileits_header").removeClass("fixed");
+			}
+		 });
+		 
+	});
+	</script>
+<!-- //script-for sticky-nav -->
+
+
+<!-- banner --><!-- 左侧横幅及中间图片滚动部分（此时横幅处的下拉栏不好使 ） -->
+	<div class="banner">
+		<div class="w3l_banner_nav_left">
+			<nav class="navbar nav_bottom"><!--链接列表-->
+			 <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header nav_2">
+				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+			   </div> 
+			   <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav nav_1">
+					    <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">内科<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="keshi.html">心脏</a></li>
+										<li><a href="keshi.html">脑血管</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">外科<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="keshi.html">外科1</a></li>
+										<li><a href="keshi.html">外科2</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">妇科<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="keshi.html">妇科1</a></li>
+										<li><a href="keshi.html">妇科2</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">耳鼻喉科<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="keshi.html">耳科</a></li>
+										<li><a href="keshi.html">鼻科</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">皮肤科<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="keshi.html">皮疹</a></li>
+										<li><a href="keshi.html">麻疹</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">骨科<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="keshi.html">风湿</a></li>
+										<li><a href="keshi.html">骨折</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						
+					</ul>
+				 </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+		
+		<div class="w3l_banner_nav_right">
+			
+<!--private -->
+		
+		
+		
+		<div class="w3_login">
+		姓名：<s:property value="name"/><br>
+		身份证号：<s:property value="uid_number"/><br>
+		性别：<s:property value="sex"/><br>
+		出生年月：<s:property value="birthday"/><br>
+		血型：<s:property value="blood_type"/><br>
+		既往病史：<s:property value="medical_history"/><br>
+		手机号码：<s:property value="mobile"/><br>
+		邮箱：<s:property value="email"/><br>
+		金币：<s:property value="money"/> <input type="button" value="充值"><br>
+		<a href="indexc.jsp?id_number=<s:property value="uid_number"/><input type="button" value="编辑"></a><br>
+		<form action="searOrders">
+		查看我的预约:
+			<input type="hidden" name="patientid" readonly="readonly" value=<%=request.getSession().getAttribute("id_number")%>>
+			<input type="submit" value="查看"/> <br>
+		</form>
+		<a href="indexf.jsp"> <input type="button" value="挂号"></a>
+		</div>
+<!--private -->	
+			
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<!-- banner -->
+
+
+
+<!-- footer -->
+	<div class="footer">
+		
+			
+			<div class="container">
+			<div class="agile_footer_grids">
+				
+				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
+					<div class="w3_footer_grid_bottom">
+						<h5>connect with us</h5>
+						<ul class="agileits_social_icons">
+							<li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						</ul><!--链接列表-->
+					</div>
+				</div><!--底部盒子右-->
+				<div class="clearfix"> </div><!--整合-->
+			</div><!--底部盒子-->
+			<div class="wthree_footer_copy">
+				<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div><!--最底部盒子-->
+		</div>
+	</div><!--向下拉动第六界面（底部区域）-->
+<!-- //footer -->
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+<script type='text/javascript' src="js/jquery.mycart.js"></script>
+<script type="text/javascript">
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+	  
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      affixCartIcon: true,
+      checkoutCart: function(products) {
+        $.each(products, function(){
+          console.log(this);
+        });
+      },
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      getDiscountPrice: function(products) {
+        var total = 0;
+        $.each(products, function(){
+          total += this.quantity * this.price;
+        });
+        return total * 1;
+      }
+    });
+
+  });
+  </script>
+
+</body>
+</html>
